@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+    color:white;
+    text-align:center;
+    background:
+    radial-gradient(circle at top,#ff8fab,#8e44ad 45%,#1b1b3a);
+}
+
+/* Stars */
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;}
+    to{opacity:1;}
+}
+
+/* Main */
+.container{
+    position:relative;
+    z-index:10;
+    width:92%;
+    max-width:520px;
+    margin:auto;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.card{
+    padding:30px 20px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 50px rgba(0,0,0,.4);
+}
+
+/* Cake */
+.cake{
+    font-size:75px;
+    margin:10px;
+    animation:bounce 1.3s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+/* Heading */
+h1{
+    font-size:38px;
+    margin:8px 0;
+}
+
+.name{
+    font-size:32px;
+    color:#ffe66d;
+    text-shadow:0 0 15px rgba(255,255,255,.7);
+}
+
+#typing{
+    min-height:55px;
+    font-size:18px;
+    line-height:1.5;
+    margin:15px 5px;
+}
+
+/* Button */
+button{
+    border:none;
+    padding:14px 25px;
+    border-radius:30px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#e84393;
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+button:active{
+    transform:scale(.92);
+}
+
+/* Gift */
+#giftArea{
+    display:none;
+    margin-top:20px;
+}
+
+.gift{
+    font-size:85px;
+    cursor:pointer;
+    animation:shake 1s infinite;
+}
+
+@keyframes shake{
+    0%,100%{transform:rotate(0);}
+    25%{transform:rotate(-8deg);}
+    75%{transform:rotate(8deg);}
+}
+
+#message{
+    display:none;
+    margin-top:15px;
+    animation:pop 1s ease;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(.2);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Balloons */
+.balloon{
+    position:fixed;
+    bottom:-130px;
+    width:48px;
+    height:62px;
+    border-radius:50%;
+    z-index:2;
+    animation:fly 9s linear infinite;
+}
+
+.balloon:after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:75px;
+    background:white;
+    top:60px;
+    left:50%;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(0) rotate(-5deg);
+    }
+    to{
+        transform:translateY(-120vh) rotate(10deg);
+    }
+}
+
+/* Confetti */
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:9px;
+    height:18px;
+    z-index:50;
+    animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* Fireworks */
+.firework{
+    position:fixed;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    z-index:30;
+    animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:scale(25);
+        opacity:0;
+    }
+}
+
+/* Mobile */
+@media(max-width:500px){
+    h1{
+        font-size:30px;
+    }
+
+    .name{
+        font-size:27px;
+    }
+
+    .card{
+        padding:25px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Stars -->
+<script>
+for(let i=0;i<80;i++){
+
+    let star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+
+    star.style.animationDelay=Math.random()*2+"s";
+
+    document.body.appendChild(star);
+}
+</script>
+
+
+<!-- Balloons -->
+<div class="balloon" style="left:3%;background:#ff4757;animation-delay:0s"></div>
+<div class="balloon" style="left:18%;background:#ffa502;animation-delay:2s"></div>
+<div class="balloon" style="left:35%;background:#2ed573;animation-delay:1s"></div>
+<div class="balloon" style="left:55%;background:#1e90ff;animation-delay:3s"></div>
+<div class="balloon" style="left:72%;background:#e84393;animation-delay:1.5s"></div>
+<div class="balloon" style="left:90%;background:#a55eea;animation-delay:2.5s"></div>
+
+
+<div class="container">
+
+<div class="card">
+
+    <div class="cake">🎂</div>
+
+    <h1>🎉 Happy Birthday 🎉</h1>
+
+    <!-- YAHAN NAAM CHANGE KARO -->
+    <div class="name">
+        Keshav ❤️
+    </div>
+
+    <div id="typing"></div>
+
+    <button onclick="startCelebration()">
+        🎁 Open Your Surprise
+    </button>
+
+    <!-- Gift -->
+    <div id="giftArea">
+
+        <div class="gift" onclick="openGift()">
+            🎁
+        </div>
+
+        <p>Gift open karne ke liye 🎁 par click karo</p>
+
+    </div>
+
+    <!-- Final Message -->
+    <div id="message">
+
+        <h2>🥳 SURPRISE! 🥳</h2>
+
+        <p>
+            May your life always be filled with
+            happiness, love and success. ❤️
+        </p>
+
+        <p>
+            Keep smiling 😊<br>
+            Keep shining ✨
+        </p>
+
+        <h2>🎂 Happy Birthday! 🎂</h2>
+
+    </div>
+
+</div>
+</div>
+
+
+<!-- YOUR BIRTHDAY SONG -->
+<audio id="music" loop>
+    <source src="birthday .mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+/* Typing Animation */
+
+let text =
+"Today is your special day! 💖 May all your dreams come true and may your smile always stay this beautiful. ✨";
+
+let index=0;
+
+function typing(){
+
+    if(index<text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typing,45);
+    }
+}
+
+typing();
+
+
+/* Celebration */
+
+function startCelebration(){
+
+    /* Music */
+    let music=document.getElementById("music");
+
+    music.play();
+
+    /* Gift show */
+    document.getElementById("giftArea").style.display="block";
+
+    /* Confetti */
+    for(let i=0;i<180;i++){
+
+        let c=document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left=Math.random()*100+"vw";
+
+        c.style.background=
+        "hsl("+Math.random()*360+",100%,60%)";
+
+        c.style.animationDuration=
+        (2+Math.random()*4)+"s";
+
+        c.style.animationDelay=
+        Math.random()*1.5+"s";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+            c.remove();
+        },6500);
+    }
+
+    /* Fireworks */
+    for(let i=0;i<20;i++){
+
+        setTimeout(()=>{
+
+            let f=document.createElement("div");
+
+            f.className="firework";
+
+            f.style.left=
+            (10+Math.random()*80)+"vw";
+
+            f.style.top=
+            (10+Math.random()*60)+"vh";
+
+            f.style.background=
+            "hsl("+Math.random()*360+",100%,70%)";
+
+            document.body.appendChild(f);
+
+            setTimeout(()=>{
+                f.remove();
+            },1200);
+
+        },i*180);
+    }
+}
+
+
+/* Gift Opening */
+
+function openGift(){
+
+    document.getElementById("message").style.display="block";
+
+    document.querySelector(".gift").innerHTML="🎉";
+
+    /* More fireworks */
+
+    for(let i=0;i<30;i++){
+
+        setTimeout(()=>{
+
+            let f=document.createElement("div");
+
+            f.className="firework";
+
+            f.style.left=
+            Math.random()*100+"vw";
+
+            f.style.top=
+            Math.random()*70+"vh";
+
+            f.style.background=
+            "hsl("+Math.random()*360+",100%,70%)";
+
+            document.body.appendChild(f);
+
+            setTimeout(()=>{
+                f.remove();
+            },1200);
+
+        },i*100);
+    }
+}
+
+</script>
+
+</body>
+</html>
